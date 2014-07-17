@@ -1,0 +1,6 @@
+{
+    "name"    : "testWebComponent",    
+    "html"    : "testWebComponent.html",
+    "styles"  : [],
+    "scripts" : ["testWebComponent.js"]
+}
