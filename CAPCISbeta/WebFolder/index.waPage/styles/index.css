@@ -3,8 +3,41 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#label2 {
+	 z-index: 8;
+	 width: 29px;
+	 height: 13px;
+	 top: 420px;
+	 left: 767px;
+	
+	 position: absolute;
+	 
+}
+
+#textField1 {
+	 z-index: 8;
+	 width: 130px;
+	 height: 22px;
+	 top: 416px;
+	 left: 801px;
+	
+	 position: absolute;
+	 
+}
+
+#component1 {
+	 z-index: 1;
+	 width: 703px;
+	 height: 464px;
+	 top: 33px;
+	 left: -56px;
+	
+	 position: absolute;
+	 
+}
+
 #label1 {
-	 z-index: 5;
+	 z-index: 4;
 	 width: 29px;
 	 height: 13px;
 	 top: 54px;
@@ -15,7 +48,7 @@
 }
 
 #frame1 {
-	 z-index: 5;
+	 z-index: 4;
 	 width: 326px;
 	 height: 213px;
 	 top: 72px;
