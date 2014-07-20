@@ -26,17 +26,6 @@
 						"Y": 26
 					}
 				}
-			},
-			"DataClass1": {
-				"panelColor": "#70CCC2",
-				"flatVisible": "false",
-				"panel": {
-					"isOpen": "true",
-					"position": {
-						"X": 25,
-						"Y": 20
-					}
-				}
 			}
 		},
 		"model": {
@@ -128,20 +117,6 @@
 					"kind": "storage",
 					"scope": "public",
 					"type": "long"
-				}
-			]
-		},
-		{
-			"collectionName": "DataClass1Collection",
-			"className": "DataClass1",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
 				}
 			]
 		}
