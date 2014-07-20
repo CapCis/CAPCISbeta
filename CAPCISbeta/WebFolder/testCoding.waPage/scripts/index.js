@@ -11,8 +11,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		//debugger;
 		ds.Table1.method1();
-		sources.table1.all();
-		
+		sources.table1.all();		
 	};// @lock
 
 // @region eventManager// @startlock
