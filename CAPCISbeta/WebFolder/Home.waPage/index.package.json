@@ -1,1 +1,1 @@
-﻿{"name":"CAPCISbeta/Home.waPage/index.html","version":"1.0.0","loadDependencies":[{"id":"default","type":"theme"},{"id":"Home.waPage/styles/index.css","path":"WEBFOLDER","type":"style"},{"id":"application.css","path":"WEBFOLDER","type":"style"}]}
+﻿{"name":"CAPCISbeta/Home.waPage/index.html","version":"1.0.0","loadDependencies":[{"id":"default","type":"theme"},{"id":"Home.waPage/styles/index.css","path":"WEBFOLDER","type":"style"},{"id":"application.css","path":"WEBFOLDER","type":"style"},{"id":"Home.waPage/scripts/index.js","path":"WEBFOLDER","type":"script"}]}
