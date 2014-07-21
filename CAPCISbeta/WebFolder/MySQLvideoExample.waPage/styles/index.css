@@ -3,6 +3,53 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#label3 {
+	 z-index: 6;
+	 width: 75px;
+	 height: 13px;
+	 top: 108px;
+	 left: 15px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 
+}
+
+#label2 {
+	 z-index: 4;
+	 width: 75px;
+	 height: 13px;
+	 top: 66px;
+	 left: 15px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 
+}
+
+#label1 {
+	 z-index: 2;
+	 width: 75px;
+	 height: 13px;
+	 top: 24px;
+	 left: 15px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 
+}
+
+#container1 {
+	 z-index: 4;
+	 width: 427px;
+	 height: 146px;
+	 top: 501px;
+	 left: 172px;
+	
+	 position: absolute;
+	 
+}
+
 #dataGrid2 {
 	 z-index: 3;
 	 width: 585px;
@@ -18,8 +65,63 @@
 	 z-index: 2;
 	 width: 245px;
 	 height: 57px;
-	 top: 509px;
-	 left: 286px;
+	 top: 500px;
+	 left: 783px;
+	
+	 position: absolute;
+	 
+}
+
+#dswidgetFN {
+	 z-index: 2;
+	 width: 130px;
+	 height: 22px;
+	 top: 20px;
+	 left: 95px;
+	
+	 position: absolute;
+	 
+}
+
+#dswidgetLN {
+	 z-index: 4;
+	 width: 130px;
+	 height: 22px;
+	 top: 62px;
+	 left: 95px;
+	
+	 position: absolute;
+	 
+}
+
+#dswidgetAID {
+	 z-index: 6;
+	 width: 130px;
+	 height: 22px;
+	 top: 104px;
+	 left: 95px;
+	
+	 position: absolute;
+	 
+}
+
+#showmeselectedname {
+	 z-index: 5;
+	 width: 50px;
+	 height: 16px;
+	 top: 141px;
+	 left: 824px;
+	
+	 position: absolute;
+	 
+}
+
+#showmeselectedid {
+	 z-index: 6;
+	 width: 50px;
+	 height: 16px;
+	 top: 188px;
+	 left: 830px;
 	
 	 position: absolute;
 	 

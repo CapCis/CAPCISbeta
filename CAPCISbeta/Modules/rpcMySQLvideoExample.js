@@ -10,7 +10,7 @@ exports.helloWorld = function helloWorld () {
 };
 
 exports.getSakilaActorTable = function getSakilaActorTable() {
-	debugger;
+	//debugger;
 	
 	var dbconnect = require('waf-mysql');
 	var param ={
