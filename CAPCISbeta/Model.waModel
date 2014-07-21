@@ -16,8 +16,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 657,
-						"Y" : 73
+						"X" : 414,
+						"Y" : 101
 					}
 				}
 			},
@@ -27,7 +27,7 @@
 				"relVisible" : "false",
 				"panel" : 
 				{
-					"isOpen" : "true",
+					"isOpen" : "false",
 					"pathVisible" : true,
 					"position" : 
 					{
@@ -87,6 +87,12 @@
 					"kind" : "storage",
 					"scope" : "public",
 					"type" : "string"
+				},
+				{
+					"name" : "picture",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "image"
 				}
 			],
 			"methods" : 

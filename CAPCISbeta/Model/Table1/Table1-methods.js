@@ -14,14 +14,17 @@ model.Table1.methods.method1 = function() {
 	var connection = dbconnect.connect(param);
 	//if (connection.isconnected)
 		{
+			debugger;			
 			var result = connection.select("first_name,last_name", "actor");
 			while (result.hasNext())
 			{
 				var row = result.getNextRow();
-				var student = ds.Table1.createEntity();
+				var student = ds.Table1.createEntity();								
+				
 				student.firstname = row.first_name;
 				student.lastname = row.last_name;
-				student.save();				
+				student.picture = row.actor_picture;
+								
 			};
 		};
 };

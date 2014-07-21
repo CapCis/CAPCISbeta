@@ -2,12 +2,18 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var button3 = {};	// @button
 	var dataGrid2 = {};	// @dataGrid
 	var documentEvent = {};	// @document
 	var button1 = {};	// @button
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	button3.click = function button3_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+	};// @lock
 
 	dataGrid2.onCellClick = function dataGrid2_onCellClick (event)// @startlock
 	{// @endlock
@@ -33,6 +39,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("button3", "click", button3.click, "WAF");
 	WAF.addListener("dataGrid2", "onCellClick", dataGrid2.onCellClick, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 	WAF.addListener("button1", "click", button1.click, "WAF");
