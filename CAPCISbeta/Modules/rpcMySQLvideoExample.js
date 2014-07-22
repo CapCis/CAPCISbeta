@@ -10,25 +10,27 @@ exports.helloWorld = function helloWorld () {
 };
 
 exports.getSakilaActorTable = function getSakilaActorTable() {
+	
 	//debugger;
 	
-	var dbconnect = require('waf-mysql');
+	//var dbconnect = require('waf-mysql');    NOW OUTDATED!!!!?
+	var dbconnect = require('waf-sql');
 	var param ={
 		hostname: 'localhost',
 		user: 'root',
 		password: '535CapCis',
 		database: 'sakila',
 		port: 3306,
-		ssl: false		
+		ssl: false,
+		dbType: 'mysql'		
 };
 	var connection = dbconnect.connect(param);
 	
-	var dbquery = 'SELECT first_name,last_name,actor_id from actor WHERE first_name = "PENELOPE"'
+	var dbquery = 'SELECT first_name,last_name,actor_id,actor_picture from actor WHERE first_name = "PENELOPE"'
 	
 	var res = connection.execute(dbquery);
 	result = res.getAllRows();
-	connection.close()
-	var mynewvariable = result
+	connection.close()	
 	return result;
 	
 		

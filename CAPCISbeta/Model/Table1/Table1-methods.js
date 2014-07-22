@@ -15,7 +15,7 @@ model.Table1.methods.method1 = function() {
 	//if (connection.isconnected)
 		{
 			debugger;			
-			var result = connection.select("first_name,last_name", "actor");
+			var result = connection.select("first_name,last_name,actor_picture", "actor");
 			while (result.hasNext())
 			{
 				var row = result.getNextRow();
@@ -24,7 +24,7 @@ model.Table1.methods.method1 = function() {
 				student.firstname = row.first_name;
 				student.lastname = row.last_name;
 				student.picture = row.actor_picture;
-								
+				student.save();				
 			};
 		};
 };
