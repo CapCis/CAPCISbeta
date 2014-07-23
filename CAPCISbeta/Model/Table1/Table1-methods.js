@@ -16,7 +16,7 @@ model.Table1.methods.method1 = function() {
 	//if (connection.isconnected)
 		{
 			//debugger;
-			ds.Table1.forEach			
+						
 			var dbquery = 'SELECT first_name,last_name,actor_id,actor_picture from actor WHERE first_name = "PENELOPE"'
 			var result = connection.execute(dbquery);
 			//result = res.getAllRows();
