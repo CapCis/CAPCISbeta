@@ -11,7 +11,7 @@ exports.helloWorld = function helloWorld () {
 
 exports.getSakilaActorTable = function getSakilaActorTable() {
 	
-	//debugger;
+	debugger;
 	
 	//var dbconnect = require('waf-mysql');    NOW OUTDATED!!!!?
 	var dbconnect = require('waf-sql');
@@ -33,8 +33,27 @@ exports.getSakilaActorTable = function getSakilaActorTable() {
 	connection.close()	
 	return result;
 	
-		
+};
+
+exports.putSakilaActorTable = function putSakilaActorTable() {
+	debugger;
 	
+	var mypicfile = File("c:/temp/Desert.jpg");
+	var dbconnect = require('waf-sql');
+	var param ={
+		hostname: 'localhost',
+		user: 'root',
+		password: '535CapCis',
+		database: 'sakila',
+		port: 3306,
+		ssl: false,
+		dbType: 'mysql'	
+	};
 	
-	
-}
+	var connection = dbconnect.connect(param);
+	//var dbquery = 'INSERT INTO actor (actor_picture) VALUES'(mypicfile);
+	var res = connection.execute("INSERT INTO actor (first_name) VALUES ('myname')");
+	              	
+	connection.close();	
+	return res;
+};
