@@ -1,159 +1,136 @@
-
-{
-	"toJSON" : true,
-	"extraProperties" : 
-	{
-		"version" : "2",
-		"classes" : 
-		{
-			"Table1" : 
-			{
-				"panelColor" : "#548DD4",
-				"relVisible" : "false",
-				"panel" : 
-				{
-					"isOpen" : "true",
-					"pathVisible" : true,
-					"position" : 
-					{
-						"X" : 414,
-						"Y" : 101
+﻿{
+	"toJSON": true,
+	"extraProperties": {
+		"version": "2",
+		"classes": {
+			"Table1": {
+				"panelColor": "#548DD4",
+				"relVisible": "false",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 218,
+						"Y": 104
 					}
 				}
 			},
-			"WakandaDBnoMYSQL" : 
-			{
-				"panelColor" : "#E5B9B7",
-				"relVisible" : "false",
-				"panel" : 
-				{
-					"isOpen" : "false",
-					"pathVisible" : true,
-					"position" : 
-					{
-						"X" : 362,
-						"Y" : 26
+			"WakandaDBnoMYSQL": {
+				"panelColor": "#E5B9B7",
+				"relVisible": "false",
+				"panel": {
+					"isOpen": "false",
+					"pathVisible": true,
+					"position": {
+						"X": 362,
+						"Y": 26
 					}
 				}
 			}
 		},
-		"model" : 
-		{
-			"scriptMode" : "manual",
-			"workspaceLeft" : 0,
-			"workspaceTop" : 0,
-			"relShowMode" : "false",
-			"lastScriptLocation" : 
-			{
-				"Table1" : 
-				{
-					"method" : "Table1/Table1-methods.js"
+		"model": {
+			"scriptMode": "manual",
+			"workspaceLeft": 0,
+			"workspaceTop": 0,
+			"relShowMode": "false",
+			"lastScriptLocation": {
+				"Table1": {
+					"method": "Table1/Table1-methods.js"
 				}
 			},
-			"relationCurve" : 
-			{
-				"run" : true,
-				"mode" : 1
+			"relationCurve": {
+				"run": true,
+				"mode": 1
 			}
 		}
 	},
-	"dataClasses" : 
-	[
+	"dataClasses": [
 		{
-			"name" : "Table1",
-			"className" : "Table1",
-			"collectionName" : "Table1Collection",
-			"scope" : "public",
-			"attributes" : 
-			[
+			"name": "Table1",
+			"className": "Table1",
+			"collectionName": "Table1Collection",
+			"scope": "public",
+			"attributes": [
 				{
-					"name" : "ID",
-					"kind" : "storage",
-					"scope" : "public",
-					"indexed" : true,
-					"unique" : true,
-					"autosequence" : true,
-					"type" : "long",
-					"indexKind" : "btree"
+					"name": "actorID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree",
+					"primKey": true
 				},
 				{
-					"name" : "firstname",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "string"
+					"name": "firstname",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
 				},
 				{
-					"name" : "lastname",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "string"
+					"name": "lastname",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
 				},
 				{
-					"name" : "picture",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "image"
+					"name": "picture",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
 				}
 			],
-			"methods" : 
-			[
+			"methods": [
 				{
-					"name" : "method1",
-					"applyTo" : "dataClass",
-					"scope" : "public",
-					"from" : "model.Table1.methods.method1",
-					"userDefined" : true
+					"name": "method1",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "model.Table1.methods.method1",
+					"userDefined": true
 				}
 			],
-			"key" : 
-			[
-				{
-					"name" : "ID"
-				}
-			]
+			"primKey": "actorID"
 		},
 		{
-			"name" : "WakandaDBnoMYSQL",
-			"className" : "WakandaDBnoMYSQL",
-			"collectionName" : "WakandaDBnoMYSQLCollection",
-			"scope" : "public",
-			"attributes" : 
-			[
+			"name": "WakandaDBnoMYSQL",
+			"className": "WakandaDBnoMYSQL",
+			"collectionName": "WakandaDBnoMYSQLCollection",
+			"scope": "public",
+			"attributes": [
 				{
-					"name" : "Name",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "string"
+					"name": "Name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
 				},
 				{
-					"name" : "Number",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "string"
+					"name": "Number",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
 				},
 				{
-					"name" : "WakandaID",
-					"kind" : "storage",
-					"scope" : "public",
-					"indexed" : true,
-					"unique" : true,
-					"autosequence" : true,
-					"type" : "long",
-					"indexKind" : "btree"
+					"name": "WakandaID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"indexKind": "btree"
 				},
 				{
-					"name" : "attribute1",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "long"
+					"name": "attribute1",
+					"kind": "storage",
+					"scope": "public",
+					"type": "long"
 				}
 			],
-			"key" : 
-			[
+			"key": [
 				{
-					"name" : "WakandaID"
+					"name": "WakandaID"
 				}
 			]
 		}
-	]
+	],
+	"type": []
 }

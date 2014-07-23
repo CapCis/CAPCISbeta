@@ -2,20 +2,24 @@
 
 model.Table1.methods.method1 = function() {
 	//debugger;
-	var dbconnect = require('waf-mysql');
+	var dbconnect = require('waf-sql');
 	var param ={
 		hostname: 'localhost',
 		user: 'root',
 		password: '535CapCis',
 		database: 'sakila',
 		port: 3306,
+		dbType: 'mysql',		
 		ssl: false		
 };
 	var connection = dbconnect.connect(param);
 	//if (connection.isconnected)
 		{
 			debugger;			
-			var result = connection.select("first_name,last_name,actor_picture", "actor");
+			var dbquery = 'SELECT first_name,last_name,actor_id,actor_picture from actor WHERE first_name = "PENELOPE"'
+			var result = connection.execute(dbquery);
+			//result = res.getAllRows();
+					
 			while (result.hasNext())
 			{
 				var row = result.getNextRow();
