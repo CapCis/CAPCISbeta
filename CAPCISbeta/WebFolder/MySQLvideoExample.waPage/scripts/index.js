@@ -35,7 +35,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		//debugger;
+		debugger;
+		
 		mySakilaSource = rpcMySQLvideoExample.getSakilaActorTable();
 		
 		sources.mySakilaSource.sync();
