@@ -15,7 +15,8 @@ model.Table1.methods.method1 = function() {
 	var connection = dbconnect.connect(param);
 	//if (connection.isconnected)
 		{
-			debugger;			
+			//debugger;
+			ds.Table1.forEach			
 			var dbquery = 'SELECT first_name,last_name,actor_id,actor_picture from actor WHERE first_name = "PENELOPE"'
 			var result = connection.execute(dbquery);
 			//result = res.getAllRows();
@@ -24,7 +25,8 @@ model.Table1.methods.method1 = function() {
 			{
 				var row = result.getNextRow();
 				var student = ds.Table1.createEntity();								
-				
+				student.remove();
+				student.refresh();
 				student.firstname = row.first_name;
 				student.lastname = row.last_name;
 				student.picture = row.actor_picture;
