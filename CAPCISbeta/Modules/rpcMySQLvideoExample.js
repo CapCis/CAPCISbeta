@@ -50,7 +50,7 @@ exports.putSakilaActorTable = function putSakilaActorTable() {
 	var mybinstreamsize = mypicfile.getSize();	
 	var bintobuffer = mypicfile.getBuffer(mybinstreamsize);
 	//var buffertostring = bintobuffer.toString('ascii');     //works in returning string values
-	var buffertostring = bintobuffer.readInt32LE();
+	//var buffertostring = bintobuffer.
 		
 	var dbconnect = require('waf-sql');
 	var param ={
