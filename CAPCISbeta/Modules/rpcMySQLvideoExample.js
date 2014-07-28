@@ -50,13 +50,13 @@ exports.putSakilaActorTable = function putSakilaActorTable() {
 	var mybinstreamsize = mypicfile.getSize();	
 	var bintobuffer = mypicfile.getBuffer(mybinstreamsize);
 	//var bintoblob = mypicfile.getBlob(mybinstreamsize);
-	var buffertoutf8 = bintobuffer.toString('ascii');
-	mypicfile.setPos(0);
-	var binstreamtobytes = mypicfile.getByte();
-	var convertbytetohex = binstreamtobytes.toString();
-	mypicfile.setPos(1);
-	var binstreamtobytes = mypicfile.getByte();
-	var convertbytetohex = convertbytetohex + binstreamtobytes.toString();
+	var buffertoutf8 = bintobuffer.toString('hex');
+	//mypicfile.setPos(0);
+	//var binstreamtobytes = mypicfile.getByte();
+	//var convertbytetohex = binstreamtobytes.toString();
+	//mypicfile.setPos(1);
+	//var binstreamtobytes = mypicfile.getByte();
+	//var convertbytetohex = convertbytetohex + binstreamtobytes.toString();
 	//var buffertostring = bintobuffer.toString('ascii');     //works in returning string values
 	//var buffertostring = bintobuffer.
 	
@@ -78,7 +78,9 @@ exports.putSakilaActorTable = function putSakilaActorTable() {
 	//var res = connection.execute(dbquery);
 	
 	
-	var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname","'+bintobuffer.toString('base64')+'")';
+	//var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname","'+bintobuffer.toString('base64')+'")';
+	//var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname",x\'D1C433\')';                                 //WORKS SENDING HEX
+	var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname",x\''+buffertoutf8+'\')';
 	
 	//var dbquery = 'INSERT INTO actor (actor_picture) VALUES'(mypicfile);
 	//var res = connection.execute('INSERT INTO actor(first_name) VALUES("myname")');
