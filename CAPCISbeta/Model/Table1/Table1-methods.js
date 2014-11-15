@@ -4,9 +4,9 @@ model.Table1.methods.method1 = function() {
 	//debugger;
 	var dbconnect = require('waf-sql');
 	var param ={
-		hostname: 'localhost',
-		user: 'root',
-		password: '535CapCis',
+		hostname: '192.168.1.20',
+		user: 'teamcapcis2',
+		password: 'teamcapcis2',
 		database: 'sakila',
 		port: 3306,
 		dbType: 'mysql',		

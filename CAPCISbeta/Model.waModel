@@ -10,8 +10,8 @@
 					"isOpen": "true",
 					"pathVisible": true,
 					"position": {
-						"X": 218,
-						"Y": 104
+						"X": 107,
+						"Y": 120
 					}
 				}
 			},
@@ -19,7 +19,7 @@
 				"panelColor": "#E5B9B7",
 				"relVisible": "false",
 				"panel": {
-					"isOpen": "false",
+					"isOpen": "true",
 					"pathVisible": true,
 					"position": {
 						"X": 362,
@@ -88,8 +88,7 @@
 					"from": "model.Table1.methods.method1",
 					"userDefined": true
 				}
-			],
-			"primKey": "actorID"
+			]
 		},
 		{
 			"name": "WakandaDBnoMYSQL",
@@ -116,7 +115,8 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
-					"indexKind": "btree"
+					"indexKind": "btree",
+					"primKey": true
 				},
 				{
 					"name": "attribute1",
@@ -124,13 +124,7 @@
 					"scope": "public",
 					"type": "long"
 				}
-			],
-			"key": [
-				{
-					"name": "WakandaID"
-				}
 			]
 		}
-	],
-	"type": []
+	]
 }
