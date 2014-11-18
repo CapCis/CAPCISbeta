@@ -32,11 +32,11 @@
 				"flatVisible": "false",
 				"panel": {
 					"isOpen": "true",
+					"pathVisible": true,
 					"position": {
 						"X": 96,
 						"Y": 237
-					},
-					"pathVisible": true
+					}
 				}
 			}
 		},
@@ -60,6 +60,38 @@
 		}
 	},
 	"dataClasses": [
+		{
+			"name": "MySQLPassThrough",
+			"className": "MySQLPassThrough",
+			"collectionName": "MySQLPassThroughCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				}
+			],
+			"methods": [
+				{
+					"name": "getMyData",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "model.MySQLPassThrough.methods.getMyData",
+					"userDefined": true
+				}
+			]
+		},
 		{
 			"name": "Table1",
 			"className": "Table1",
@@ -138,26 +170,6 @@
 					"kind": "storage",
 					"scope": "public",
 					"type": "long"
-				}
-			]
-		},
-		{
-			"collectionName": "MySQLPassThroughCollection",
-			"className": "MySQLPassThrough",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
-				},
-				{
-					"name": "name",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
 				}
 			]
 		}
