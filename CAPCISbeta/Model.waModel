@@ -10,8 +10,8 @@
 					"isOpen": "true",
 					"pathVisible": true,
 					"position": {
-						"X": 107,
-						"Y": 120
+						"X": 675,
+						"Y": 51
 					}
 				}
 			},
@@ -26,6 +26,18 @@
 						"Y": 26
 					}
 				}
+			},
+			"MySQLPassThrough": {
+				"panelColor": "#76923C",
+				"flatVisible": "false",
+				"panel": {
+					"isOpen": "true",
+					"position": {
+						"X": 96,
+						"Y": 237
+					},
+					"pathVisible": true
+				}
 			}
 		},
 		"model": {
@@ -36,6 +48,9 @@
 			"lastScriptLocation": {
 				"Table1": {
 					"method": "Table1/Table1-methods.js"
+				},
+				"MySQLPassThrough": {
+					"method": "MySQLPassThrough/MySQLPassThrough-methods.js"
 				}
 			},
 			"relationCurve": {
@@ -125,6 +140,27 @@
 					"type": "long"
 				}
 			]
+		},
+		{
+			"collectionName": "MySQLPassThroughCollection",
+			"className": "MySQLPassThrough",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "name",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				}
+			]
 		}
-	]
+	],
+	"type": []
 }

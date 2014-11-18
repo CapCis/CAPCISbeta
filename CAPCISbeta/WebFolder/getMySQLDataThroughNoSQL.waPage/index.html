@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html><html>
+    <head>
+        <title>index</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="generator" content="Wakanda GUIDesigner"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="WAF.catalog" content="MySQLPassThrough"/>
+        <meta name="WAF.packageJson"/>
+    	<meta name="wakanda-version" content="8 build 8.162963"/>
+		<meta name="wakanda-build" content="8.162963"/>
+		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
+		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
+
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="array" data-source="arr1" data-lib="WAF" data-id="arr1" data-dataType="string" data-autoLoad="true" data-attributes="firstname:string,lastname:string,id_testtable1:number:key,pict:object" content="arr1"/>
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="MySQLPassThrough" data-lib="WAF" data-id="mySQLPassThrough" data-dataType="string" data-autoLoad="true" content="mySQLPassThrough"/><meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
+</head>
+    <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-workspace-device="desktop" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="default" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
+    	<button id="button1" data-type="button" data-text="RunModelMethod" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-action="simple" class="waf-widget waf-button"></button>
+		<div id="dataGrid1" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'firstname','colID':'firstname','width':'150','title':'firstname'},{'sourceAttID':'lastname','colID':'lastname','width':'150','title':'lastname'}]" data-binding="arr1" data-constraint-left="true" data-constraint-top="true"></div>
+		<input id="textField4" data-type="textField" data-lib="WAF" type="text" class="waf-widget waf-textField" data-label="Label" data-label-position="left" data-multiline="false" data-readOnly="false" data-password="false" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-left="true" data-constraint-top="true" data-binding="arr1.firstname"/>
+		<label id="label4" data-type="label" data-lib="WAF" for="textField4" data-valign="middle" data-margin="5" class="waf-widget waf-label waf-label-textfield" data-constraint-left="true" data-constraint-top="true">Label</label>
+		<input id="textField5" data-type="textField" data-lib="WAF" type="text" class="waf-widget waf-textField" data-label="Label" data-label-position="left" data-multiline="false" data-readOnly="false" data-password="false" data-datapicker-on="true" data-datapicker-icon-only="false" data-binding="arr1.lastname"/>
+		<label id="label5" data-type="label" data-lib="WAF" for="textField5" data-valign="middle" data-margin="5" class="waf-widget waf-label waf-label-textfield" data-constraint-left="true" data-constraint-top="true">Label</label>
+		<input id="textField6" data-type="textField" data-lib="WAF" type="text" class="waf-widget waf-textField" data-label="Label" data-label-position="left" data-multiline="false" data-readOnly="false" data-password="false" data-datapicker-on="true" data-datapicker-icon-only="false" data-binding="arr1.id_testtable1" data-constraint-left="true" data-constraint-top="true"/>
+		<label id="label6" data-type="label" data-lib="WAF" for="textField6" data-valign="middle" data-margin="5" class="waf-widget waf-label waf-label-textfield" data-constraint-left="true" data-constraint-top="true">Label</label>
+		<div id="image1" data-type="image" data-lib="WAF" class="waf-widget waf-image" data-target="_blank" data-label="" data-label-position="left" data-fit="0" data-constraint-left="true" data-constraint-top="true" data-binding="arr1.pict"></div>
+		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
+	</body>
+</html>

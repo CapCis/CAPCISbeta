@@ -43,14 +43,14 @@ exports.putSakilaActorTable = function putSakilaActorTable() {
 	debugger;
 	
 	//var mypicfile = File("c:/temp/Desert.jpg");
-	var mypicfile = BinaryStream('c:/Temp/Desert.jpg','Read')
+	var mypicfile = BinaryStream('c:/Temp/Desert.jpg','Read')				//Create a Binary Stream from file on Disk
 	//var mypicfile = BinaryStream("c:/temp/sometext.txt","Read",7);
 	
 	//var blobtotext = "";
-	var mybinstreamsize = mypicfile.getSize();	
-	var bintobuffer = mypicfile.getBuffer(mybinstreamsize);
+	var mybinstreamsize = mypicfile.getSize();								//Get the size of the Binary Stream in bits and put it into an Integer Var
+	var bintobuffer = mypicfile.getBuffer(mybinstreamsize); 				//Convert the Binary Stream to a Buffer for processing
 	//var bintoblob = mypicfile.getBlob(mybinstreamsize);
-	var buffertoutf8 = bintobuffer.toString('hex');
+	var buffertoutf8 = bintobuffer.toString('hex'); 						//Put the new Binary Buffer into a String for further processing
 	//mypicfile.setPos(0);
 	//var binstreamtobytes = mypicfile.getByte();
 	//var convertbytetohex = binstreamtobytes.toString();
@@ -58,7 +58,7 @@ exports.putSakilaActorTable = function putSakilaActorTable() {
 	//var binstreamtobytes = mypicfile.getByte();
 	//var convertbytetohex = convertbytetohex + binstreamtobytes.toString();
 	//var buffertostring = bintobuffer.toString('ascii');     //works in returning string values
-	//var buffertostring = bintobuffer.
+	
 	
 	
 		
@@ -80,7 +80,7 @@ exports.putSakilaActorTable = function putSakilaActorTable() {
 	
 	//var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname","'+bintobuffer.toString('base64')+'")';
 	//var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname",x\'D1C433\')';                                 //WORKS SENDING HEX
-	var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname",x\''+buffertoutf8+'\')';
+	var dbquery = 'INSERT INTO actor (first_name,last_name,actor_picture) VALUES ("myfirstname","mylastname",x\''+buffertoutf8+'\')'; 						//Send the String to MySQL
 	
 	//var dbquery = 'INSERT INTO actor (actor_picture) VALUES'(mypicfile);
 	//var res = connection.execute('INSERT INTO actor(first_name) VALUES("myname")');
