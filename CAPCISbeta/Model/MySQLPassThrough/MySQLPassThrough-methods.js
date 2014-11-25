@@ -95,5 +95,28 @@ model.MySQLPassThrough.methods.getMyData2 = function(fname,lname) {
 	
 	//return [fname, lname];      //Returns an Array that holds two arrays fname and lname
 };
+
+
+model.MySQLPassThrough.methods.getMyPict = function(blank) {
+	var dbconnect = require('waf-sql');
+	var param ={
+		hostname: '68.106.70.68',
+		user: 'teamcapcis2',
+		password: 'teamcapcis2',
+		database: 'test',
+		port: 3306,
+		ssl: false,
+		dbType: 'mysql'
+}
+		
+	var connection = dbconnect.connect(param);
+	
+	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%wick%"');
+	MyResults = result.getAllRows();
+	
+	connection.close;
+	return MyResults;
+};
 model.MySQLPassThrough.methods.getMyData.scope = "public";
 model.MySQLPassThrough.methods.getMyData2.scope = "public";
+model.MySQLPassThrough.methods.getMyPict.scope = "public";

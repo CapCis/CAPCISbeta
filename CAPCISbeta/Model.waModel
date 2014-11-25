@@ -89,6 +89,20 @@
 					"scope": "public",
 					"from": "model.MySQLPassThrough.methods.getMyData",
 					"userDefined": true
+				},
+				{
+					"name": "getMyData2",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "model.MySQLPassThrough.methods.getMyData2",
+					"userDefined": true
+				},
+				{
+					"name": "getMyPict",
+					"applyTo": "dataClass",
+					"scope": "public",
+					"from": "model.MySQLPassThrough.methods.getMyPict",
+					"userDefined": true
 				}
 			]
 		},
@@ -173,6 +187,5 @@
 				}
 			]
 		}
-	],
-	"type": []
+	]
 }
