@@ -10,9 +10,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
 		            
-		//var myPic = ds.MySQLPassThrough.getMyPict({generateRESTRequestOnly:true},"null");
-		var myPic = rpcGetPictureFromMySQL.getMyPicture()
-		var myPicFrame = document.getElementById("image1");
+		var myPic = ds.MySQLPassThrough.getMyPict({generateRESTRequestOnly:true},"null");
+		//var myPic = rpcGetPictureFromMySQL.getMyPicture();
+		var myPicFrame = document.getElementById("displayFrame");
 		myPicFrame.src = myPic;
 		
 	};// @lock

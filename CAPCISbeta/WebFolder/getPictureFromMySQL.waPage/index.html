@@ -13,13 +13,14 @@
 
 		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 
-		<meta data-type="dataSource" data-lib="WAF" data-source="MySQLPassThrough" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="mySQLPassThrough" content="mySQLPassThrough"/><meta name="WAF.config.rpc.file" content="/rpc-proxy/rpcGetPictureFromMySQL?namespace=rpcGetPictureFromMySQL"/>
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="MySQLPassThrough" data-lib="WAF" data-id="mySQLPassThrough" data-dataType="string" data-autoLoad="true" content="mySQLPassThrough"/><meta name="WAF.config.rpc.file" content="/rpc-proxy/rpcGetPictureFromMySQL?namespace=rpcGetPictureFromMySQL"/>
 </head>
     <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-workspace-device="desktop" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="default" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
-    	<div id="image1" data-type="image" data-target="_blank" data-lib="WAF" data-label-position="left" data-label="" data-fit="0" class="waf-widget waf-image" data-constraint-left="true" data-constraint-top="true"></div>
+    	<div id="image1" data-type="image" data-target="_blank" data-lib="WAF" data-label-position="left" data-label="" data-fit="0" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-image"></div>
 		<button id="button1" data-type="button" data-text="Get Picture" data-target="_blank" data-lib="WAF" data-action="simple" class="waf-widget waf-button"></button>
-	<div id="frame1" data-type="frame" data-lib="WAF" data-label="Label" data-label-position="top" class="waf-widget waf-frame"></div>
-		<label id="label1" data-type="label" data-lib="WAF" for="frame1" data-valign="middle" data-margin="5" class="waf-widget waf-label waf-label-frame" data-constraint-left="true" data-constraint-top="true">Label</label>
+		<div id="viewFrame" data-type="container" data-resizable="false" data-lib="WAF" data-label-position="top" data-label="" data-draggable="false" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-container default waf-container-level-0 waf-level-0">
+<iframe style="width:100%;height:100%" id="displayFrame"></iframe> 
+</div>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>
 </html>

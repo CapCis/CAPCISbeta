@@ -3,23 +3,11 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#label1 {
-	 z-index: 4;
-	 width: 29px;
-	 height: 13px;
-	 top: 156px;
-	 left: 421px;
-	
-	 position: absolute;
-	 
-}
-
-#frame1 {
-	 z-index: 4;
-	 width: 414px;
-	 height: 287px;
-	 top: 174px;
-	 left: 421px;
+#viewFrame {
+	 width: 294px;
+	 height: 211px;
+	 top: 242px;
+	 left: 445px;
 	
 	 position: absolute;
 	 

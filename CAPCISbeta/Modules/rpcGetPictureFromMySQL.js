@@ -28,8 +28,14 @@ exports.getMyPicture = function getMyPicture() {
 	
 	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%wick%"');
 	MyResults = result.getAllRows();
-	
+	var varBinArray = MyResults[0];
+	var varBinObject = varBinArray.pict;
+	var varBinBlobToBuffer = varBinObject.toBuffer();
+	var varBinBufferToString = varBinBlobToBuffer.toString('hex');	
+	var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.txt','Write');
+	mypicfile.putBuffer(varBinBlobToBuffer,0);	
 	connection.close;
-	return MyResults;
+	return {HTTPStream: mypicfile, headers: {'Content-Type': "image/jpeg"}}
+//return {HTTPStream: MyResults}
 	
 }
