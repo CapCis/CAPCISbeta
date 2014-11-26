@@ -114,10 +114,11 @@ model.MySQLPassThrough.methods.getMyPict = function(blank) {
 	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%wick%"');
 	MyResults = result.getAllRows();
 	var varBinObject = MyResults[0].pict;
-	var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.txt','Write');
-	mypicfile.putBlob(varBinObject,0);	
+	var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.jpg','Write');
+	mypicfile.putBlob(varBinObject,0);
+	myFile = File("c:/Temp/TempBinaryStream.jpg")	
 	connection.close;
-	return {HTTPStream: mypicfile, headers: {'Content-Type': "image/jpeg"}}
+	return {HTTPStream: myFile, headers: {"Content-Type": "image/jpeg"}}
 };
 model.MySQLPassThrough.methods.getMyData.scope = "public";
 model.MySQLPassThrough.methods.getMyData2.scope = "public";

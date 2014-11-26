@@ -35,7 +35,8 @@ exports.getMyPicture = function getMyPicture() {
 	var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.txt','Write');
 	mypicfile.putBuffer(varBinBlobToBuffer,0);	
 	connection.close;
-	return {HTTPStream: mypicfile, headers: {'Content-Type': "image/jpeg"}}
-//return {HTTPStream: MyResults}
+	//return mypicfile
+	//return {HTTPStream: mypicfile, headers: {'Content-Type': "image/jpeg"}}
+    return {HTTPStream: mypicfile}
 	
 }
