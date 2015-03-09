@@ -11,10 +11,11 @@ exports.helloWorld = function helloWorld () {
 
 
 
-exports.getMyPicture = function getMyPicture() {
+exports.getMyPicture1 = function getMyPicture() {
 	
 	var dbconnect = require('waf-sql');
-	var param ={
+	var param = 
+	{
 		hostname: '68.106.70.68',
 		user: 'teamcapcis2',
 		password: 'teamcapcis2',
@@ -22,7 +23,7 @@ exports.getMyPicture = function getMyPicture() {
 		port: 3306,
 		ssl: false,
 		dbType: 'mysql'
-}
+	};
 		
 	var connection = dbconnect.connect(param);
 	
@@ -31,13 +32,70 @@ exports.getMyPicture = function getMyPicture() {
 	var varBinArray = MyResults[0];
 	var varBinObject = varBinArray.pict;
 	var varBinBlobToBuffer = varBinObject.toBuffer();
-	var varBinBufferToString = "data:image/jpeg;base64, " + varBinBlobToBuffer.toString('base64');	
-	//var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.txt','Write');
-	//mypicfile.putBuffer(varBinBlobToBuffer,0);	
+	var varBinBufferToString = "data:image/jpeg;base64, " + varBinBlobToBuffer.toString('base64');		
 	connection.close;
-	return varBinBufferToString
-	//return mypicfile
-	//return {HTTPStream: mypicfile, headers: {'Content-Type': "image/jpeg"}}
-    //return {HTTPStream: mypicfile}
+	return varBinBufferToString;
 	
-}
+	
+};
+
+exports.getMyPicture2 = function getMyPicture() {
+	
+	var dbconnect = require('waf-sql');
+	var param = 
+	{
+		hostname: '68.106.70.68',
+		user: 'teamcapcis2',
+		password: 'teamcapcis2',
+		database: 'test',
+		port: 3306,
+		ssl: false,
+		dbType: 'mysql'
+	};
+		
+	var connection = dbconnect.connect(param);
+	
+	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%wick%"');
+	MyResults = result.getAllRows();
+	var varBinArray = MyResults[0];
+	var varBinObject = varBinArray.pict;
+	var varBinBlobToBuffer = varBinObject.toBuffer();
+	var varBinBufferToString = "data:image/jpeg;base64, " + varBinBlobToBuffer.toString('base64');			
+	connection.close;
+	return varBinBufferToString;
+	
+		
+};
+
+
+
+
+exports.getMyPicture3 = function getMyPicture() {
+	
+	var dbconnect = require('waf-sql');
+	var param = 
+	{
+		hostname: '68.106.70.68',
+		user: 'teamcapcis2',
+		password: 'teamcapcis2',
+		database: 'test',
+		port: 3306,
+		ssl: false,
+		dbType: 'mysql'
+	};
+		
+	var connection = dbconnect.connect(param);
+	
+	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%Dylan%"');
+	MyResults = result.getAllRows();
+	var varBinArray = MyResults[0];
+	var varBinObject = varBinArray.pict;
+	var varBinBlobToBuffer = varBinObject.toBuffer();
+	var varBinBufferToString = "data:application/octet-stream;base64, " + varBinBlobToBuffer.toString('base64');
+	var varBinBufferToString = varBinBlobToBuffer.toString('base64');			
+			
+	connection.close;
+	return varBinBufferToString;
+	
+	
+};

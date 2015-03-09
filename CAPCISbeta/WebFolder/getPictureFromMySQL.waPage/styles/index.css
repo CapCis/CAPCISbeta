@@ -3,11 +3,77 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#label2 {
+	 z-index: 9;
+	 width: 29px;
+	 height: 13px;
+	 top: 429px;
+	 left: 146px;
+	
+	 position: absolute;
+	 
+}
+
+#frame1 {
+	 z-index: 9;
+	 width: 559px;
+	 height: 335px;
+	 top: 447px;
+	 left: 146px;
+	
+	 position: absolute;
+	 
+}
+
+#label1 {
+	 z-index: 7;
+	 width: 29px;
+	 height: 13px;
+	 top: 179px;
+	 left: 763px;
+	
+	 position: absolute;
+	 
+}
+
+#canvas1 {
+	 z-index: 7;
+	 width: 295px;
+	 height: 235px;
+	 top: 197px;
+	 left: 763px;
+	
+	 position: absolute;
+	 
+}
+
+#button4 {
+	 z-index: 5;
+	 width: 286px;
+	 height: 53px;
+	 top: 68px;
+	 left: 762px;
+	
+	 position: absolute;
+	 
+}
+
+#button3 {
+	 z-index: 4;
+	 width: 271px;
+	 height: 54px;
+	 top: 68px;
+	 left: 391px;
+	
+	 position: absolute;
+	 
+}
+
 #viewFrame {
 	 width: 294px;
 	 height: 211px;
-	 top: 242px;
-	 left: 445px;
+	 top: 203px;
+	 left: 401px;
 	
 	 position: absolute;
 	 
@@ -17,8 +83,8 @@
 	 z-index: 2;
 	 width: 260px;
 	 height: 55px;
-	 top: 58px;
-	 left: 278px;
+	 top: 68px;
+	 left: 62px;
 	
 	 position: absolute;
 	 
