@@ -18,7 +18,7 @@ model.MySQLPassThrough.methods.getMyData = function(fname,lname) {
 	//var result = connection.execute("SELECT * FROM test_table WHERE id_testtable1 > '0'");
 	//var result = connection.execute('SELECT * FROM test_table WHERE CONTAINS(lastname,"e")');   //Correct Syntax does not return string
 	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%ev%"');
-	MyResults = result.getAllRows();
+	var MyResults = result.getAllRows();
 	
 	
 	// Create a 10 second pause 
@@ -60,6 +60,7 @@ model.MySQLPassThrough.methods.getMyData2 = function(fname,lname) {
 		dbType: 'mysql'
 }
 		
+	
 	var connection = dbconnect.connect(param);
 		
 	//var result = connection.select("firstname,lastname","test_table",{lastname: "Levey"});
@@ -107,18 +108,23 @@ model.MySQLPassThrough.methods.getMyPict = function(blank) {
 		port: 3306,
 		ssl: false,
 		dbType: 'mysql'
-}
-		
+	};
+	debugger;
 	var connection = dbconnect.connect(param);
 	
 	var result = connection.execute('SELECT * FROM test_table WHERE lastname LIKE "%wick%"');
 	MyResults = result.getAllRows();
-	var varBinObject = MyResults[0].pict;
-	var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.jpg','Write');
-	mypicfile.putBlob(varBinObject,0);
-	myFile = File("c:/Temp/TempBinaryStream.jpg")	
+	var varBinBlob = MyResults[0].pict;
+	var varBinBlobToBuffer = varBinBlob.toBuffer();
+	//var varBinBufferToString = "data:image/jpeg-stream;base64, " + varBinBlobToBuffer.toString('base64');
+	//var mypicfile = BinaryStream('c:/Temp/TempBinaryStream.jpg','Write'); 						//working ver 1
+	//mypicfile.putBlob(varBinBlob,0); 																//working ver 1
+	//myFile = File("c:/Temp/TempBinaryStream.jpg");												//working ver 1
 	connection.close;
-	return {HTTPStream: myFile, headers: {"Content-Type": "image/jpeg"}}
+	
+	return varBinBufferToString;
+	return {HTTPStream: varBinBufferToString, headers: {"Content-Type": "image/jpeg"}};  							//working ver 1
+	
 };
 model.MySQLPassThrough.methods.getMyData.scope = "public";
 model.MySQLPassThrough.methods.getMyData2.scope = "public";
